@@ -1,0 +1,68 @@
+/* ------------------------------ */
+/*        headerのスタイル　　　　　  */
+/* ------------------------------ */
+
+header {
+    display: flex; /*headerの中のh1タグとnavタグを横並びにする*/
+    justify-content: space-between; /*両サイドに寄せる*/
+    height: 70px; /*高さを70pxにする*/
+    align-items: center; /*文字を中央に持ってくる*/
+    padding: 0 35px; /*上下0、左右に35pxのpaddingをつける*/
+    background-color: black; /*背景を黒にする(今回高さが分かりやすいように黒にした)*/
+    color: white; /*文字の色を白にする*/
+    position: fixed; /*スクロールした時に固定する(今回は分かりづらいです)*/
+    z-index: 2; /*上に表示させるようにする*/
+    width: 100%; /*画面幅いっぱいにする*/
+}
+header h1 {
+    font-size: 1.4em; /*フォントの大きさを指定(pxでも可)*/
+}
+#nav ul {
+    display: flex; /*文字の横並び */
+}
+#nav li {
+    font-weight: bold; /*フォントを太くする*/
+    margin-left: 35px; /*左にmarginをつける*/
+}
+
+
+/* ------------------------------ */
+/*   トップセクションのスタイル   */
+/* ------------------------------ */
+
+.topsection {
+    background-image: url(../img/view.jpg); /*背景画像を指定する*/
+    height: 100vh; /*高さを画面と合わせる*/
+    background-size: cover; /*背景領域を完全に覆う最小サイズにする*/
+    background-position: 50%; /*中央に持ってくる*/
+    position: relative; /*changing-wrapの親要素に指定する*/
+}
+.reproduction-wrap {
+    position: absolute; /*changing-wrapの子要素に指定する*/
+    top: 50%; /*top,left,transformの3点セットで中央に配置する*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.reproduction {
+    font-size: 2em; /*フォントの大きさを指定する*/
+    color: rgb(248, 129, 60); /*文字の色を指定する*/
+    font-weight: bold; /*フォントを太くする*/
+}
+.topsection hr {
+    height: 2.5px; /*線の太さを指定する*/
+    background-color: rgb(248, 129, 60); /*色を指定する*/
+    width: 45%; /*長さを指定する*/
+    border: none; /*ボーダーをなくす*/
+    margin: 20px auto; /*上下に20px、autoで中央に寄せる*/
+}
+.entry {
+    margin-top: 150px; /*上にmarginを入れる*/
+    background: linear-gradient(to right, #283C86, #06BEB6); /*グラデーションをつける*/
+    box-shadow: 0 5px black; /*影をつける*/
+    text-align: center; /*文字を中央寄せする*/
+    border-radius: 5px; /*角を丸くする*/
+    padding: 15px 0; /*上下にpaddingを15px、左右を0にする*/
+}
+.entry a {
+    color: white; /*色を指定する*/
+}
